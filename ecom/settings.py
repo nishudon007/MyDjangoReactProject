@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'api',
     'api.category',  # check these names in app.py
-    'api.product',  # check these names in app.py
+    'api.product'  # check these names in app.py
+    # 'api.user'
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,8 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# AUTH_USER_MODEL = "user.CustomUser"
 
 CORS_ALLOW_ALL_ORIGINS = True
 
