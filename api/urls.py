@@ -1,6 +1,7 @@
 from django.urls import path, include
 
 from rest_framework.authtoken import views
+from rest_framework.authtoken.views import obtain_auth_token
 
 # from the views.py file, which is inside the same directory import home method
 from .views import home
@@ -10,5 +11,8 @@ urlpatterns = [
     path('category/', include('api.category.urls')),
     path('product/', include('api.product.urls')),
     path('user/', include('api.user.urls')),
-
+    path('order/', include('api.order.urls')),
+    # default token generation provided by django rest framework (User requesting a token)
+    # we are not using this method ,we are using our own method to generate token
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]
