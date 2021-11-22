@@ -12,6 +12,7 @@ urlpatterns = [
     path('product/', include('api.product.urls')),
     path('user/', include('api.user.urls')),
     path('order/', include('api.order.urls')),
+    path('payment/', include('api.payment.urls')),
     # default token generation provided by django rest framework (User requesting a token)
     # we are not using this method ,we are using our own method to generate token
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),

@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'api.category',  # check these names in app.py
     'api.product',  # check these names in app.py
     'api.user',
-    'api.order'
+    'api.order',
+    'api.payment'
 ]
 
 MIDDLEWARE = [
